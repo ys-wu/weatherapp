@@ -6,3 +6,6 @@ up:
 
 down:
 	docker compose down --remove-orphans
+
+unit-tests:
+	docker compose run --rm --no-deps --entrypoint=npm backend run test
