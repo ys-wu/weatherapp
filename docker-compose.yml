@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+    image: weatherapp_backend
+    ports:
+      - 9000:9000
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    image: weatherapp_frontend
+    ports:
+      - 8000:8000
+    volumes:
+      - ./frontend:/app
+    restart: always
+    depends_on:
+      - backend
