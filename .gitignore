@@ -1,4 +1,15 @@
-*.env
+# Env
+/backend/.env
+
+# Python
+*__pycache__/
+venv/
+
+# Robot Framework
+screenshots/
+*.html
+*.xml
+*.png
 
 # OSX
 .DS_Store

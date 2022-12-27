@@ -7,5 +7,8 @@ up:
 down:
 	docker compose down --remove-orphans
 
-unit-tests:
+mocha-tests:
 	docker compose run --rm --no-deps --entrypoint=npm backend run test
+
+robot-tests:
+	./venv/bin/robot ./robotframework/tests.robot

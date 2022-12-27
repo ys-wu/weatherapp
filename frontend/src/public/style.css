@@ -1,14 +1,16 @@
-body{
-  overflow: hidden;
+body {
+  /* overflow: hidden; */
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Sans-serif;
+  font-size: 15px;
 }
 
-.icon {
+/* .icon {
   width: 30vw;
   height: 30vw;
-}
+} */

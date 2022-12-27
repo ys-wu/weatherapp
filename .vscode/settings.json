@@ -1,3 +1,0 @@
-{
-    "python.defaultInterpreterPath": "${workspaceFolder}/mock/venv/bin/python"
-}

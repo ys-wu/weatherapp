@@ -20,8 +20,8 @@ describe('POST /api/weather', () => {
       .end((_err, response) => {
         response.should.have.status(200);
         response.body.should.be.a('object');
-        response.body.should.have.property('country');
-        response.body.should.have.property('city');
+        response.body.should.have.property('country').eq('FI');
+        response.body.should.have.property('city').eq('Helsinki');
         response.body.should.have.property('description');
         response.body.should.have.property('icon');
         response.body.should.have.property('temp');
@@ -43,7 +43,6 @@ describe('POST /api/forecast', () => {
         response.body[0].should.be.a('object');
         response.body[0].should.have.property('key');
         response.body[0].should.have.property('datetime');
-        response.body[0].should.have.property('icon');
         response.body[0].should.have.property('icon');
         response.body[0].should.have.property('temp');
         done();
