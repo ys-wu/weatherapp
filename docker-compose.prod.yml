@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+    image: weatherapp_backend_prod
+    ports:
+      - 9000:9000
+    env_file:
+      - ./backend/.env
+    entrypoint: ["npm", "start"]
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    image: weatherapp_frontend_prod
+    environment:
+      - ENDPOINT=http://backend:9000/api
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - backend

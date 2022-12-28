@@ -12,3 +12,12 @@ mocha-tests:
 
 robot-tests:
 	./venv/bin/robot ./robotframework/tests.robot
+
+build-prod:
+	docker compose -f docker-compose.prod.yml build
+
+up-prod:
+	docker compose -f docker-compose.prod.yml up -d
+
+down-prod:
+	docker compose -f docker-compose.prod.yml down --remove-orphans
