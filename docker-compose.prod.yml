@@ -18,8 +18,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.prod
     image: weatherapp_frontend_prod
-    environment:
-      - ENDPOINT=http://backend:9000/api
     ports:
       - 80:80
     restart: always
