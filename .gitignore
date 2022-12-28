@@ -1,5 +1,6 @@
-# Env
-/backend/.env
+*.env
+encryption/
+TO-DO.md
 
 # Python
 *__pycache__/

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const GLOBALS = {
-  'process.env.ENDPOINT': JSON.stringify(process.env.ENDPOINT || 'http://0.0.0.0:9000/api'),
+  'process.env.ENDPOINT': JSON.stringify(process.env.ENDPOINT || 'https://weather.yushengwu.com/api'),
 };
 
 module.exports = {
